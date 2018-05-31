@@ -99,6 +99,11 @@ public class SignJarsTask extends Task {
         alias = s;
     }
     
+    private String tsaUrl;
+    public void setTsaUrl(String s){
+        tsaUrl = s;
+    }
+    
     private File mainJar;
     public void setMainjar(File f) {
         mainJar = f;
@@ -201,6 +206,7 @@ public class SignJarsTask extends Task {
         signJar.setStorepass(storepass);
         signJar.setKeypass(keypass);
         signJar.setAlias(alias);
+        signJar.setAlias(setTsaurl);
         signJar.init();
         
         // test main jar if its already signed with passed alias ??
